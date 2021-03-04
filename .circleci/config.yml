@@ -1,0 +1,65 @@
+version: 2.1
+
+workflows:
+  version: 2
+  build-master:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+      - publish-github-release:
+          context:
+            - github
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+
+jobs:
+  build:
+    working_directory: ~/event.bananpe.win
+    docker:
+      - image: circleci/node:14.15.0-buster
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - run:
+          name: Build server
+          command: yarn build
+      - run: mkdir -p /tmp/artifacts
+      - run:
+          name: Create archive
+          command: |
+            cd ~/event.bananpe.win \
+            && rm -f docker-compose.yml \
+            && mv docker-compose.prod.yml docker-compose.yml \
+            && tar -cvzf /tmp/artifacts/event.bananpe.win.tar.gz \
+            ./.nuxt \
+            ./yarn.lock \
+            ./docker-compose.yml \
+            ./package.json \
+            ./tsconfig.json
+      - persist_to_workspace:
+          root: /tmp/artifacts
+          paths:
+            - event.bananpe.win.tar.gz
+
+  publish-github-release:
+    docker:
+      - image: cibuilds/github:0.10
+    steps:
+      - attach_workspace:
+          at: /tmp/artifacts
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            VERSION=${CIRCLE_TAG}
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts/
