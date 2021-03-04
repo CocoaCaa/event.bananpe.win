@@ -43,6 +43,7 @@ jobs:
             && mv docker-compose.prod.yml docker-compose.yml \
             && tar -cvzf /tmp/artifacts/event.bananpe.win.tar.gz \
             ./.nuxt \
+            ./static \
             ./yarn.lock \
             ./docker-compose.yml \
             ./package.json \
