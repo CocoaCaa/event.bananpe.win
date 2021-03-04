@@ -58,33 +58,6 @@ export default Vue.extend({})
 </script>
 
 <style>
-h1 {
-  @apply text-5xl;
-}
-
-h2 {
-  @apply text-4xl;
-  color: #FBE35A;
-}
-
-h3 {
-  @apply text-3xl;
-}
-
-a {
-  text-decoration: underline;
-}
-
-.container {
-  @apply mx-auto px-5 max-w-screen-lg;
-}
-
-@screen lg {
-  .container {
-    @apply px-0;
-  }
-}
-
 .landing-header {
   background-image: linear-gradient(#00FFF2, #00FFA6);
   height: 400px;
