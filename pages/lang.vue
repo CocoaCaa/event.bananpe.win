@@ -1,7 +1,7 @@
 <template>
   <div class="lang">
     <h1>Choose your language</h1>
-    <div class="grid grid-cols-3 gap-4 mt-5">
+    <div class="grid grid-cols-4 gap-4 mt-5">
       <button
         v-for="locale in availableLocales"
         :key="locale.code"

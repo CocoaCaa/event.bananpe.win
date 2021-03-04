@@ -47,6 +47,12 @@ export default {
   i18n: {
     locales: [
       {
+        name: 'English',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+      },
+      {
         name: '繁體中文',
         code: 'zh-hant',
         iso: 'zh-Hant',
@@ -59,10 +65,10 @@ export default {
         file: 'zh-Hans.js',
       },
       {
-        name: 'English',
-        code: 'en',
-        iso: 'en-US',
-        file: 'en-US.js',
+        name: '日本語',
+        code: 'ja-jp',
+        iso: 'ja-JP',
+        file: 'ja-JP.js',
       },
     ],
     strategy: 'prefix',

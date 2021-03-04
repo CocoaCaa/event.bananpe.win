@@ -37,7 +37,7 @@
             :description="$t('landing.joinEvent.steps.1.description')"
           >
             <iframe
-              class="mx-auto"
+              class="mx-auto mt-5"
               src="https://discord.com/widget?id=413200888010637313&theme=dark"
               width="350"
               height="500"
