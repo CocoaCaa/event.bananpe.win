@@ -1,9 +1,19 @@
 <template>
-  <div class="landing">
+  <div v-if="isSetLanguage" class="landing">
     <header class="landing-header">
       <div class="container landing-header__container">
-        <img class="landing-header__fox" src="~/assets/images/fox.png" width="1699px" height="1774px">
-        <img class="landing-header__cocoacaa" src="~/assets/images/cocoacaa.png" width="395px" height="637px">
+        <img
+          class="landing-header__fox"
+          src="~/assets/images/fox.png"
+          width="1699px"
+          height="1774px"
+        />
+        <img
+          class="landing-header__cocoacaa"
+          src="~/assets/images/cocoacaa.png"
+          width="395px"
+          height="637px"
+        />
         <div class="landing-header__right">
           <div class="landing-header__info">
             <h1 class="landing-header__title">{{ $t('landing.title') }}</h1>
@@ -26,13 +36,20 @@
             :title="$t('landing.joinEvent.steps.1.title')"
             :description="$t('landing.joinEvent.steps.1.description')"
           >
-            <iframe class="mx-auto" src="https://discord.com/widget?id=413200888010637313&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe
+              class="mx-auto"
+              src="https://discord.com/widget?id=413200888010637313&theme=dark"
+              width="350"
+              height="500"
+              allowtransparency="true"
+              frameborder="0"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
           </StepCard>
           <StepCard
             :title="$t('landing.joinEvent.steps.2.title')"
             :description="$t('landing.joinEvent.steps.2.description')"
           >
-
           </StepCard>
           <StepCard
             :title="$t('landing.joinEvent.steps.3.title')"
@@ -45,21 +62,35 @@
     <footer class="footer">
       <div class="container">
         <p>Copyright © 2021 bananape.win</p>
-        <p><a href="https://animalroyale.com/" target="_blank">Super Animal Royale</a> is copyright <a href="https://pixilestudios.com/" target="_blank">Pixile, Inc</a> and is not affiliated with this site.</p>
+        <p>
+          <a href="https://animalroyale.com/" target="_blank"
+            >Super Animal Royale</a
+          >
+          is copyright
+          <a href="https://pixilestudios.com/" target="_blank">Pixile, Inc</a>
+          and is not affiliated with this site.
+        </p>
       </div>
     </footer>
   </div>
+  <div v-else />
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+import { RootState } from '~/store'
 
-export default Vue.extend({})
+@Component
+export default class Index extends Vue {
+  get isSetLanguage(): boolean {
+    return (this.$store.state as RootState).isSetLanguage;
+  }
+}
 </script>
 
 <style>
 .landing-header {
-  background-image: linear-gradient(#00FFF2, #00FFA6);
+  background-image: linear-gradient(#00fff2, #00ffa6);
   height: 400px;
   overflow: hidden;
 }
@@ -139,7 +170,7 @@ export default Vue.extend({})
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
-  color: #FECD44;
+  color: #fecd44;
 }
 
 @screen md {
@@ -151,7 +182,7 @@ export default Vue.extend({})
 }
 
 .landing-header__title {
-  color: #FBE35A;
+  color: #fbe35a;
   font-weight: bold;
 }
 

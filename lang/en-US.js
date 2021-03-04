@@ -1,6 +1,6 @@
 module.exports = {
   landing: {
-    title: "Let's Throw!",
+    title: "Super Let's Throw!",
     headline: 'Only throwable and melee',
     eventDate: '2021 Mar 27',
     joinEvent: {
@@ -9,10 +9,10 @@ module.exports = {
         {
           title: 'Install the Game',
           description:
-            'Go to Steam and search “Super Animal Royale” or visit <a href="https://animalroyale.com/" target="_blank">the offical website</a>',
+            'Go to Steam and search “Super Animal Royale” or visit <a href="https://animalroyale.com/" target="_blank">the official website</a>',
         },
         {
-          title: 'Join the Offical “Super Animal Royale” Discord',
+          title: 'Join the official “Super Animal Royale” Discord',
           description:
             'You could get the latest news on here and discuss with everyone!',
         },

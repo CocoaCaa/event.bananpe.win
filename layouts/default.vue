@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
+
+@Component
+export default class Default extends Vue {
+    mounted() {
+      this.$router.push(this.localeRoute('/lang')?.path ?? '/en/lang');
+    }
+}
+</script>
+
 <style>
 html {
   font-family: "Chiron Sans HK WS", sans-serif;
@@ -25,20 +36,22 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
   font-family: "Josefin Sans", "Chiron Sans HK WS", sans-serif;
 }
 
 h1 {
-  @apply text-5xl;
-}
-
-h2 {
   @apply text-4xl;
   color: #FBE35A;
 }
 
-h3 {
+h2 {
   @apply text-3xl;
+  color: #FBE35A;
+}
+
+h3 {
+  @apply text-2xl;
 }
 
 a {
