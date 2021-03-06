@@ -48,7 +48,7 @@
           </StepCard>
           <StepCard
             :title="$t('landing.joinEvent.steps.2.title')"
-            :description="$t('landing.joinEvent.steps.2.description')"
+            :description="$t('landing.joinEvent.steps.2.description', { inviteUrl: 'https://discord.gg/ErA73PhPAw' })"
           >
           </StepCard>
           <StepCard

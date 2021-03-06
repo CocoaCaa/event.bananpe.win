@@ -19,7 +19,7 @@ module.exports = {
         {
           title: 'Join the event Discord',
           description:
-            'You have to join the event Discord before start, <a href="https://discord.gg/qA23ahNfhM" target="_blank">https://discord.gg/qA23ahNfhM</a> and go to #event-registration to write down your Steam name',
+            'You have to join the event Discord before start, <a href="{inviteUrl}" target="_blank">{inviteUrl}</a> and go to #event-registration to write down your Steam name',
         },
         {
           title: 'Wait for start',

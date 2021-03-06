@@ -19,7 +19,7 @@ module.exports = {
         {
           title: 'ゲームイベント Discord に参加します',
           description:
-            '開始前にイベント Discord (<a href="https://discord.gg/qA23ahNfhM" target="_blank">https://discord.gg/qA23ahNfhM</a>) に参加して、#event-registration Steam 選手名を書き込んでください。',
+            '開始前にイベント Discord (<a href="{inviteUrl}" target="_blank">{inviteUrl}</a>) に参加して、#event-registration Steam 選手名を書き込んでください。',
         },
         {
           title: '開始を待ちます',

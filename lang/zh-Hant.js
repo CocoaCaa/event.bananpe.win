@@ -18,7 +18,7 @@ module.exports = {
         {
           title: '加入活動 Discord',
           description:
-            '你必須在開始前加入活動的 Discord，<a href="https://discord.gg/qA23ahNfhM" target="_blank">https://discord.gg/qA23ahNfhM</a> 並到 #event-registration 中寫下你的Steam名字。',
+            '你必須在開始前加入活動的 Discord，<a href="{inviteUrl}" target="_blank">{inviteUrl}</a> 並到 #event-registration 中寫下你的Steam名字。',
         },
         {
           title: '等待開始',
