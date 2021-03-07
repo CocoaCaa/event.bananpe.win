@@ -10,5 +10,4 @@ services:
       - ./:/home/node/app
     environment:
       NUXT_HOST: 0.0.0.0
-    restart: always
     command: "yarn dev"
