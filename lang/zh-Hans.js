@@ -2,7 +2,7 @@ module.exports = {
   landing: {
     title: "Super Let's Throw!",
     headline: '只有投掷物和近战',
-    eventDate: '2021年3月27日',
+    eventDate: '2021年3月28日',
     joinEvent: {
       title: '如何参加活动？',
       steps: [
@@ -23,7 +23,7 @@ module.exports = {
         {
           title: '等待开始',
           description:
-            '活动将于 <strong>2021年3月27日下午09:00 (UTC+8)</strong> 开始，希望大家会喜欢！',
+            '活动将于 <strong>2021年3月28日下午7時(UTC+8)</strong> 开始，希望大家会喜欢！',
         },
       ],
     },

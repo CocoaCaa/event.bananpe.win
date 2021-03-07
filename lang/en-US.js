@@ -2,7 +2,7 @@ module.exports = {
   landing: {
     title: "Super Let's Throw!",
     headline: 'Only throwable and melee',
-    eventDate: '2021 Mar 27',
+    eventDate: '2021 Mar 28',
     joinEvent: {
       title: 'How to join the event?',
       steps: [
@@ -24,7 +24,7 @@ module.exports = {
         {
           title: 'Wait for start',
           description:
-            'The event will start on <strong>2021 Mar 27 01:00pm UTC</strong>, hope you will like this!',
+            'The event will start on <strong>2021 Mar 28 11:00am UTC</strong>, hope you will like this!',
         },
       ],
     },
