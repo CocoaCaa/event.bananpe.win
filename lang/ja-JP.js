@@ -9,7 +9,7 @@ module.exports = {
         {
           title: 'ゲームをインストールします',
           description:
-            'Steamで『Super Animal Royale』と検索するか、<a href="https://animalroyale.com/" target="_blank">公式サイト</a>にアクセスしてください。',
+            'Steamで『Super Animal Royale』を検索するか、<a href="https://animalroyale.com/" target="_blank">公式サイト</a>にアクセスしてください。',
         },
         {
           title: '“Super Animal Royale”の公式Discordに加入しよう!',
