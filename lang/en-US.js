@@ -14,17 +14,17 @@ module.exports = {
         {
           title: 'Join the official “Super Animal Royale” Discord',
           description:
-            'You could get the latest news on here and discuss with everyone!',
+            'You could get the latest news here and discuss with everyone!',
         },
         {
           title: 'Join the event Discord',
           description:
-            'You have to join the event Discord before start, <a href="{inviteUrl}" target="_blank">{inviteUrl}</a> and go to #event-registration to write down your Steam name',
+            'You have to join the event Discord server before starting, <a href="{inviteUrl}" target="_blank">{inviteUrl}</a> and go to #event-registration to write down your Steam name',
         },
         {
           title: 'Wait for start',
           description:
-            'The event will start on <strong>2021 Mar 28 11:00am UTC</strong>, hope you will like this!',
+            'The event will be starting on <strong>2021 Mar 28 11:00am UTC</strong>, hope you will like this!',
         },
       ],
     },
